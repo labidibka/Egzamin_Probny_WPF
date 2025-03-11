@@ -1,0 +1,41 @@
+﻿<Window x:Class="Egzamin_Probny_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Egzamin_Probny_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="LightSteelBlue">
+        <GroupBox Header="Dane Pracownika" Margin="52,52,459,176">
+            <StackPanel>
+                <Label>Imię</Label>
+                <TextBox x:Name="imie"></TextBox>
+                <Label>Nazwisko</Label>
+                <TextBox x:Name="Nazwisko"></TextBox>
+                <Label>Stanowisko</Label>
+                <ComboBox x:Name="stanowisko">
+                    <ComboBoxItem Content="Kierownik"/>
+                    <ComboBoxItem Content="Starszy Programista"/>
+                    <ComboBoxItem Content="Młodszy Programista"></ComboBoxItem>
+                    <ComboBoxItem Content="Tester"></ComboBoxItem>
+
+                </ComboBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="GroupBox" Margin="471,52,73,176">
+            <StackPanel Height="156">
+                <Label>Ile Znaków?</Label>
+                <TextBox x:Name="znaki"></TextBox>
+                <CheckBox x:Name="Wielkie_male" IsChecked="True" Margin="0,10,0,0">Małe i Wielkie Litery</CheckBox>
+                <CheckBox x:Name="Cyfry" Margin="0,10,0,10">Cyfry</CheckBox>
+                <CheckBox x:Name="Specjalne">Znaki Specjalne</CheckBox>
+                <Button Content="Generuj Hasło" Margin="0,5,0,0" Width="134" Background="SteelBlue" Click="Button_Click" Foreground="White"></Button>
+            </StackPanel>
+        </GroupBox>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="259,345,0,0" VerticalAlignment="Top" Width="286" Height="37" Background="SteelBlue" Foreground="White" Click="Button_Click_1"></Button>
+
+
+
+    </Grid>
+</Window>
